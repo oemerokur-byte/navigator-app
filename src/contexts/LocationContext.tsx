@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect, useCallback, useContext, useMemo } from 'react';
 import { AppState, Platform } from 'react-native';
-import BackgroundGeolocation from 'react-native-background-geolocation';
+import { translate } from '../utils/localize';
+import { configureTracker, getCurrentPositionAsync, startTracker, stopTracker } from '../utils/tracker';
 import BackgroundFetch from 'react-native-background-fetch';
 import { check, PERMISSIONS, RESULTS } from 'react-native-permissions';
 import { Place, Point } from '@fleetbase/sdk';
@@ -60,13 +61,7 @@ export const LocationProvider = ({ children }) => {
         if (!canTrackLocation) return;
 
         try {
-            const location = await BackgroundGeolocation.getCurrentPosition({
-                samples: 3,
-                desiredAccuracy: 1,
-                extras: {
-                    event: 'getCurrentPosition',
-                },
-            });
+            const location = await getCurrentPositionAsync();
             setLocation(location);
             trackDriver(location.coords);
         } catch (error) {
@@ -110,95 +105,50 @@ export const LocationProvider = ({ children }) => {
         };
     }, [adapter, driver?.id, authToken]);
 
-    // Callback to handle location updates.
-    const onLocation = useCallback(
-        (location) => {
-            console.log('[BackgroundGeolocation] onLocation:', location);
-            setLocation(location);
-        },
-        [setLocation]
-    );
-
-    // Callback to handle activity updates.
-    const onMotionChange = useCallback(
-        (event) => {
-            console.log('[BackgroundGeolocation] onMotionChange:', event);
-            if (event.location) {
-                onLocation(event.location);
-            }
-        },
-        [onLocation]
-    );
-
-    // Callback to handle location errors.
-    const onLocationError = useCallback((error) => {
-        console.warn('[BackgroundGeolocation] onLocationError:', error);
-    }, []);
-
     // Function to start tracking.
-    const startTracking = useCallback(() => {
+    const startTracking = useCallback(async () => {
         if (!canTrackLocation) return;
 
-        BackgroundGeolocation.start(() => {
+        try {
+            await startTracker();
             setIsTracking(true);
-            console.log('[BackgroundGeolocation] Tracking started');
-        });
+        } catch (error) {
+            console.warn('[Tracker] could not start:', error);
+        }
     }, [canTrackLocation]);
 
     // Function to stop tracking.
-    const stopTracking = useCallback(() => {
-        BackgroundGeolocation.stop(() => {
+    const stopTracking = useCallback(async () => {
+        try {
+            await stopTracker();
+        } finally {
             setIsTracking(false);
-            console.log('[BackgroundGeolocation] Tracking stopped');
-        });
+        }
     }, []);
 
+    // Keep the tracker settings (API url, token, callback) up to date.
+    useEffect(() => {
+        configureTracker({
+            url: adapter && driver?.id && authToken ? `${adapter.host}/${adapter.namespace}/drivers/${driver.id}/track` : null,
+            headers: {
+                Authorization: `Bearer ${authToken}`,
+                'Content-Type': 'application/json',
+                'User-Agent': '@fleetbase/navigator-app',
+            },
+            onLocation: (nextLocation) => setLocation(nextLocation),
+            texts: { title: translate('ui.tracker.title'), description: translate('ui.tracker.description') },
+        });
+    }, [adapter, driver?.id, authToken, setLocation]);
+
+    // Start or stop tracking when the driver goes online/offline or permission changes.
     useEffect(() => {
         if (!canTrackLocation) {
             stopTracking();
             return;
         }
 
-        let isActive = true;
-        const subscriptions = [];
-
-        BackgroundGeolocation.ready(
-            {
-                backgroundPermissionRationale: {
-                    title: 'Allow Fleetbase Navigator to access your location',
-                    message:
-                        'Fleetbase Navigator collects precise location data to enable real-time driver tracking and order progress updates for your organization’s dispatchers and operations team, even when the app is closed or not in use. Location is collected while you are online and is sent securely to Fleetbase.',
-                    positiveAction: 'Allow',
-                    negativeAction: 'Deny',
-                },
-                desiredAccuracy: BackgroundGeolocation.DESIRED_ACCURACY_HIGH,
-                distanceFilter: 10,
-                stopOnTerminate: false,
-                startOnBoot: true,
-                stopTimeout: 1,
-                debug: false,
-                ...getHttpConfig(),
-            },
-            (state) => {
-                console.log('[BackgroundGeolocation] is ready:', state);
-                if (isActive) {
-                    startTracking();
-                }
-            }
-        );
-
-        // Subscribe to location events.
-        subscriptions.push(BackgroundGeolocation.onLocation(onLocation, onLocationError));
-
-        // Subscribe to motion and activity events.
-        subscriptions.push(BackgroundGeolocation.onMotionChange(onMotionChange));
-
-        // Clean up the listener when unmounting.
-        return () => {
-            isActive = false;
-            subscriptions.forEach((subscription) => subscription?.remove?.());
-        };
-    }, [canTrackLocation, onLocation, onLocationError, onMotionChange, getHttpConfig, startTracking, stopTracking]);
+        startTracking();
+    }, [canTrackLocation, startTracking, stopTracking]);
 
     // Configure BackgroundFetch for periodic tasks.
     useEffect(() => {

@@ -1,0 +1,160 @@
+{
+    "common": {
+        "fleetbase": "Fleetbase",
+        "navigator": "Navigator",
+        "apiKey": "API-ключ",
+        "cancel": "Скасувати",
+        "new": "Новий",
+        "create": "Створити",
+        "save": "Зберегти",
+        "delete": "Видалити",
+        "edit": "Редагувати",
+        "update": "Оновити",
+        "service": "Послуга",
+        "retry": "Повторити",
+        "loading": "Завантаження...",
+        "confirm": "Підтвердити",
+        "confirmation": "Підтвердження",
+        "ok": "OK",
+        "done": "Готово",
+        "tryAgain": "Спробувати ще раз"
+    },
+    "orderStatuses": {
+        "created": "Створено",
+        "preparing": "Готується",
+        "dispatched": "Призначено",
+        "driver_enroute": "Водій у дорозі",
+        "pending": "Очікує",
+        "in_progress": "Виконується",
+        "completed": "Завершено"
+    },
+    "BootScreen": {
+        "missingRequiredConfigurationKeys": "Відсутні необхідні ключі конфігурації"
+    },
+    "AccountScreen": {
+        "changeProfilePhotoOptions": {
+            "takePhoto": "Зробити фото",
+            "photoLibrary": "Фотобібліотека",
+            "deleteProfilePhoto": "Видалити фото профілю"
+        },
+        "profilePhoto": "Фото профілю",
+        "email": "Електронна пошта",
+        "phoneNumber": "Номер телефону",
+        "name": "Ім'я",
+        "language": "Мова",
+        "theme": "Тема",
+        "deleteAccount": "Видалити обліковий запис",
+        "termsOfService": "Умови користування",
+        "privacyPolicy": "Політика конфіденційності",
+        "tracking": "Відстеження",
+        "account": "Обліковий запис",
+        "dataProtection": "Захист даних",
+        "clearCache": "Очистити кеш",
+        "signOut": "Вийти",
+        "signedOut": "Ви вийшли.",
+        "cacheCleared": "Кеш очищено.",
+        "schemeChanged": "Тепер використовується режим {{selectedScheme}}.",
+        "languageChanged": "Тепер використовується мова: {{selectedLanguage}}.",
+        "photoChanged": "Фото профілю змінено.",
+        "photoRemoved": "Фото профілю видалено."
+    },
+    "ProfileScreen": {
+        "organizationChanged": "Перемкнено на організацію {{selectedOrganization}}."
+    },
+    "AddNewLocationScreen": {
+        "addNewAddress": "Додати нову адресу",
+        "streetName": "Вулиця та номер будинку",
+        "weThinkYoureAroundHere": "Схоже, ви десь поруч",
+        "cantFindYourAddress": "Не знаходите свою адресу?",
+        "useMapInstead": "Скористайтеся мапою"
+    },
+    "SetupWarningScreen": {
+        "configurationMissing": "Відсутня конфігурація!",
+        "unconfiguredApp": "Схоже, застосунок налаштовано неправильно.",
+        "envMissing": "відсутнє в середовищі!"
+    },
+    "LocationPermissionScreen": {
+        "enableLocationServices": "Повідомлення про використання геолокації",
+        "enableLocationPrompt": "Okur Fleet збирає точні дані про ваше місцезнаходження, щоб диспетчери та офіс вашої компанії бачили водіїв і хід виконання замовлень у реальному часі, навіть коли застосунок закрито або не використовується. Геолокація збирається, поки ви онлайн, і передається безпечно.",
+        "shareAndContinue": "Дозволити геолокацію та продовжити",
+        "privacyPolicy": "Політика конфіденційності",
+        "permissionNeededTitle": "Потрібен дозвіл на геолокацію",
+        "enableInSettingsTitle": "Увімкніть геолокацію в налаштуваннях",
+        "permissionDeniedPrompt": "Для входу потрібен доступ до геолокації. Дозволити доступ зараз?",
+        "locationBlockedPrompt": "Доступ до геолокації заблоковано. Відкрийте налаштування та увімкніть його, щоб продовжити.",
+        "goToSettings": "До налаштувань"
+    },
+    "ui": {
+        "tabs": {
+            "dash": "Головна",
+            "orders": "Замовлення",
+            "reports": "Звіти",
+            "chat": "Чат",
+            "account": "Профіль"
+        },
+        "yes": "Так",
+        "no": "Ні",
+        "na": "Н/д",
+        "invalidPhone": "Вказано недійсний номер телефону.",
+        "tracker": {
+            "title": "Okur Fleet",
+            "description": "Геолокація передається"
+        },
+        "dashboard": {
+            "tracking": "Відстеження:",
+            "location": "Місцезнаходження:",
+            "latitude": "Широта:",
+            "longitude": "Довгота:",
+            "heading": "Напрямок:",
+            "altitude": "Висота:",
+            "activeOrders": "Активні замовлення",
+            "speed": "Швидкість"
+        },
+        "order": {
+            "acceptOrder": "Прийняти замовлення",
+            "dismissOrder": "Відхилити замовлення",
+            "startOrder": "Почати замовлення",
+            "updateActivity": "Оновити статус",
+            "startNavigation": "Почати навігацію",
+            "orderInformation": "Інформація про замовлення",
+            "internalId": "Внутрішній ID",
+            "trackingNumber": "Номер відстеження",
+            "proofOfDelivery": "Підтвердження доставки",
+            "type": "Тип",
+            "dateCreated": "Дата створення",
+            "dateScheduled": "Запланована дата",
+            "dateDispatched": "Дата призначення",
+            "orderRoute": "Маршрут замовлення",
+            "orderProgress": "Хід виконання замовлення",
+            "currentDestination": "Поточний пункт призначення",
+            "nextDestination": "Наступний пункт призначення",
+            "totalDistance": "Загальна відстань",
+            "startTime": "Час початку",
+            "currentEta": "Поточний час прибуття",
+            "ect": "Орієнтовне завершення",
+            "notDispatchedTitle": "Замовлення ще не призначено",
+            "notDispatchedMessage": "Це замовлення ще не призначено. Ви впевнені, що хочете продовжити?",
+            "warning": "Увага!",
+            "adhocAcceptTitle": "Прийняти термінове замовлення?",
+            "adhocAcceptMessage": "Якщо ви приймете це термінове замовлення, його буде призначено вам і воно почнеться негайно.",
+            "adhocDismissTitle": "Відхилити термінове замовлення?",
+            "adhocDismissMessage": "Якщо ви відхилите це термінове замовлення, воно більше не відображатиметься як доступне.",
+            "accept": "Прийняти",
+            "continue": "Продовжити"
+        },
+        "report": {
+            "issues": "Проблеми",
+            "fuelReports": "Звіти про пальне",
+            "status": "Статус:",
+            "priority": "Пріоритет:",
+            "report": "Звіт:",
+            "type": "Тип:",
+            "category": "Категорія:",
+            "vehicle": "Транспортний засіб:",
+            "reporter": "Автор звіту:",
+            "odometer": "Одометр:",
+            "volume": "Обсяг:",
+            "cost": "Вартість:"
+        }
+    }
+}

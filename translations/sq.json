@@ -1,0 +1,160 @@
+{
+    "common": {
+        "fleetbase": "Fleetbase",
+        "navigator": "Navigator",
+        "apiKey": "Çelësi API",
+        "cancel": "Anulo",
+        "new": "I ri",
+        "create": "Krijo",
+        "save": "Ruaj",
+        "delete": "Fshi",
+        "edit": "Ndrysho",
+        "update": "Përditëso",
+        "service": "Shërbimi",
+        "retry": "Provo përsëri",
+        "loading": "Duke u ngarkuar...",
+        "confirm": "Konfirmo",
+        "confirmation": "Konfirmim",
+        "ok": "OK",
+        "done": "U krye",
+        "tryAgain": "Provo përsëri"
+    },
+    "orderStatuses": {
+        "created": "Krijuar",
+        "preparing": "Në përgatitje",
+        "dispatched": "Caktuar",
+        "driver_enroute": "Shoferi është rrugës",
+        "pending": "Në pritje",
+        "in_progress": "Në vazhdim",
+        "completed": "Përfunduar"
+    },
+    "BootScreen": {
+        "missingRequiredConfigurationKeys": "Mungojnë çelësat e nevojshëm të konfigurimit"
+    },
+    "AccountScreen": {
+        "changeProfilePhotoOptions": {
+            "takePhoto": "Bëj foto",
+            "photoLibrary": "Galeria e fotove",
+            "deleteProfilePhoto": "Fshi foton e profilit"
+        },
+        "profilePhoto": "Foto e profilit",
+        "email": "Email",
+        "phoneNumber": "Numri i telefonit",
+        "name": "Emri",
+        "language": "Gjuha",
+        "theme": "Tema",
+        "deleteAccount": "Fshi llogarinë",
+        "termsOfService": "Kushtet e përdorimit",
+        "privacyPolicy": "Politika e privatësisë",
+        "tracking": "Gjurmimi",
+        "account": "Llogaria",
+        "dataProtection": "Mbrojtja e të dhënave",
+        "clearCache": "Pastro memorien",
+        "signOut": "Dil",
+        "signedOut": "U çkyçët.",
+        "cacheCleared": "Memoria u pastrua.",
+        "schemeChanged": "Tani përdoret modaliteti {{selectedScheme}}.",
+        "languageChanged": "Tani përdoret gjuha: {{selectedLanguage}}.",
+        "photoChanged": "Foto e profilit u ndryshua.",
+        "photoRemoved": "Foto e profilit u hoq."
+    },
+    "ProfileScreen": {
+        "organizationChanged": "U kalua te organizata {{selectedOrganization}}."
+    },
+    "AddNewLocationScreen": {
+        "addNewAddress": "Shto adresë të re",
+        "streetName": "Rruga dhe numri",
+        "weThinkYoureAroundHere": "Mendojmë se jeni diku afër",
+        "cantFindYourAddress": "Nuk e gjeni adresën tuaj?",
+        "useMapInstead": "Përdorni një hartë"
+    },
+    "SetupWarningScreen": {
+        "configurationMissing": "Mungon konfigurimi!",
+        "unconfiguredApp": "Duket se aplikacioni nuk është konfiguruar si duhet.",
+        "envMissing": "mungon në mjedis!"
+    },
+    "LocationPermissionScreen": {
+        "enableLocationServices": "Njoftim për përdorimin e vendndodhjes",
+        "enableLocationPrompt": "Okur Fleet mbledh vendndodhjen tuaj të saktë që dispeçerët dhe zyra e kompanisë suaj të shohin shoferët dhe ecurinë e porosive në kohë reale, edhe kur aplikacioni është i mbyllur ose nuk përdoret. Vendndodhja mblidhet sa kohë jeni online dhe transmetohet në mënyrë të sigurt.",
+        "shareAndContinue": "Lejo vendndodhjen dhe vazhdo",
+        "privacyPolicy": "Politika e privatësisë",
+        "permissionNeededTitle": "Nevojitet leja e vendndodhjes",
+        "enableInSettingsTitle": "Aktivizo vendndodhjen te cilësimet",
+        "permissionDeniedPrompt": "Qasja te vendndodhja është e nevojshme për t'u kyçur. Dëshironi ta lejoni tani?",
+        "locationBlockedPrompt": "Qasja te vendndodhja është bllokuar. Hapni cilësimet dhe aktivizojeni për të vazhduar.",
+        "goToSettings": "Shko te cilësimet"
+    },
+    "ui": {
+        "tabs": {
+            "dash": "Kreu",
+            "orders": "Porositë",
+            "reports": "Raportet",
+            "chat": "Biseda",
+            "account": "Llogaria"
+        },
+        "yes": "Po",
+        "no": "Jo",
+        "na": "N/A",
+        "invalidPhone": "Numri i telefonit është i pavlefshëm.",
+        "tracker": {
+            "title": "Okur Fleet",
+            "description": "Vendndodhja po ndahet"
+        },
+        "dashboard": {
+            "tracking": "Gjurmimi:",
+            "location": "Vendndodhja:",
+            "latitude": "Gjerësia:",
+            "longitude": "Gjatësia:",
+            "heading": "Drejtimi:",
+            "altitude": "Lartësia:",
+            "activeOrders": "Porositë aktive",
+            "speed": "Shpejtësia"
+        },
+        "order": {
+            "acceptOrder": "Prano porosinë",
+            "dismissOrder": "Refuzo porosinë",
+            "startOrder": "Fillo porosinë",
+            "updateActivity": "Përditëso statusin",
+            "startNavigation": "Fillo navigimin",
+            "orderInformation": "Informacioni i porosisë",
+            "internalId": "ID e brendshme",
+            "trackingNumber": "Numri i gjurmimit",
+            "proofOfDelivery": "Dëshmia e dorëzimit",
+            "type": "Lloji",
+            "dateCreated": "Data e krijimit",
+            "dateScheduled": "Data e planifikuar",
+            "dateDispatched": "Data e caktimit",
+            "orderRoute": "Itinerari i porosisë",
+            "orderProgress": "Ecuria e porosisë",
+            "currentDestination": "Destinacioni aktual",
+            "nextDestination": "Destinacioni tjetër",
+            "totalDistance": "Distanca totale",
+            "startTime": "Ora e fillimit",
+            "currentEta": "Ora aktuale e mbërritjes",
+            "ect": "Përfundimi i parashikuar",
+            "notDispatchedTitle": "Porosia nuk është caktuar ende",
+            "notDispatchedMessage": "Kjo porosi nuk është caktuar ende. Jeni i sigurt që dëshironi të vazhdoni?",
+            "warning": "Kujdes!",
+            "adhocAcceptTitle": "Të pranohet porosia urgjente?",
+            "adhocAcceptMessage": "Nëse e pranoni këtë porosi urgjente, ajo do t'ju caktohet dhe do të fillojë menjëherë.",
+            "adhocDismissTitle": "Të refuzohet porosia urgjente?",
+            "adhocDismissMessage": "Nëse e refuzoni këtë porosi urgjente, ajo nuk do të shfaqet më si e disponueshme.",
+            "accept": "Prano",
+            "continue": "Vazhdo"
+        },
+        "report": {
+            "issues": "Probleme",
+            "fuelReports": "Raportet e karburantit",
+            "status": "Statusi:",
+            "priority": "Prioriteti:",
+            "report": "Raporti:",
+            "type": "Lloji:",
+            "category": "Kategoria:",
+            "vehicle": "Mjeti:",
+            "reporter": "Raportuesi:",
+            "odometer": "Kilometrazhi:",
+            "volume": "Vëllimi:",
+            "cost": "Kostoja:"
+        }
+    }
+}

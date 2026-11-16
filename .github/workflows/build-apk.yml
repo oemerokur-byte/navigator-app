@@ -20,7 +20,9 @@ jobs:
           corepack prepare yarn@3.6.4 --activate
 
       - name: Pakete installieren
-        run: yarn install --immutable
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: 'false'
+        run: yarn install
 
       - uses: actions/setup-java@v4
         with:
@@ -47,8 +49,9 @@ jobs:
             echo "FLEETBASE_KEY=${{ secrets.FLEETBASE_KEY }}"
             echo "GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}"
             echo "DEFAULT_COORDINATES=51.4344,6.7623"
-            echo "ANDROID_VERSION_CODE=1"
-            echo "ANDROID_VERSION_NAME=1.0.0"
+            echo "DEFAULT_LOCALE=de"
+            echo "ANDROID_VERSION_CODE=2"
+            echo "ANDROID_VERSION_NAME=1.1.0"
           } > .env
 
       - name: Firebase-Platzhalter anlegen

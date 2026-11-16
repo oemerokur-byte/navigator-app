@@ -10,8 +10,10 @@ import { useAuth } from '../contexts/AuthContext';
 import useAppTheme from '../hooks/use-app-theme';
 import PhoneInput from '../components/PhoneInput';
 import LinearGradient from 'react-native-linear-gradient';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const PhoneLoginScreen = () => {
+    const { t } = useLanguage();
     const navigation = useNavigation();
     const theme = useTheme();
     const { isDarkMode } = useAppTheme();
@@ -24,7 +26,7 @@ const PhoneLoginScreen = () => {
         }
 
         if (!isValidPhoneNumber(phone)) {
-            return toast.error('Invalid phone number provided.');
+            return toast.error(t('ui.invalidPhone'));
         }
 
         try {

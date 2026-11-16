@@ -1,0 +1,160 @@
+{
+    "common": {
+        "fleetbase": "Fleetbase",
+        "navigator": "Navigator",
+        "apiKey": "API ključ",
+        "cancel": "Otkaži",
+        "new": "Novo",
+        "create": "Kreiraj",
+        "save": "Sačuvaj",
+        "delete": "Obriši",
+        "edit": "Izmeni",
+        "update": "Ažuriraj",
+        "service": "Usluga",
+        "retry": "Pokušaj ponovo",
+        "loading": "Učitavanje...",
+        "confirm": "Potvrdi",
+        "confirmation": "Potvrda",
+        "ok": "U redu",
+        "done": "Gotovo",
+        "tryAgain": "Pokušajte ponovo"
+    },
+    "orderStatuses": {
+        "created": "Kreirana",
+        "preparing": "U pripremi",
+        "dispatched": "Dodeljena",
+        "driver_enroute": "Vozač je na putu",
+        "pending": "Na čekanju",
+        "in_progress": "U toku",
+        "completed": "Završena"
+    },
+    "BootScreen": {
+        "missingRequiredConfigurationKeys": "Nedostaju potrebni konfiguracioni ključevi"
+    },
+    "AccountScreen": {
+        "changeProfilePhotoOptions": {
+            "takePhoto": "Snimi fotografiju",
+            "photoLibrary": "Galerija fotografija",
+            "deleteProfilePhoto": "Obriši profilnu sliku"
+        },
+        "profilePhoto": "Profilna slika",
+        "email": "E-pošta",
+        "phoneNumber": "Broj telefona",
+        "name": "Ime",
+        "language": "Jezik",
+        "theme": "Tema",
+        "deleteAccount": "Obriši nalog",
+        "termsOfService": "Uslovi korišćenja",
+        "privacyPolicy": "Politika privatnosti",
+        "tracking": "Praćenje",
+        "account": "Nalog",
+        "dataProtection": "Zaštita podataka",
+        "clearCache": "Očisti keš",
+        "signOut": "Odjavi se",
+        "signedOut": "Odjavljeni ste.",
+        "cacheCleared": "Keš je očišćen.",
+        "schemeChanged": "Sada se koristi režim {{selectedScheme}}.",
+        "languageChanged": "Sada se koristi jezik: {{selectedLanguage}}.",
+        "photoChanged": "Profilna slika je promenjena.",
+        "photoRemoved": "Profilna slika je uklonjena."
+    },
+    "ProfileScreen": {
+        "organizationChanged": "Prebačeno na organizaciju {{selectedOrganization}}."
+    },
+    "AddNewLocationScreen": {
+        "addNewAddress": "Dodaj novu adresu",
+        "streetName": "Ulica i kućni broj",
+        "weThinkYoureAroundHere": "Mislimo da ste negde u blizini",
+        "cantFindYourAddress": "Ne možete da pronađete svoju adresu?",
+        "useMapInstead": "Koristite kartu"
+    },
+    "SetupWarningScreen": {
+        "configurationMissing": "Nedostaje konfiguracija!",
+        "unconfiguredApp": "Izgleda da aplikacija nije ispravno podešena.",
+        "envMissing": "nedostaje u okruženju!"
+    },
+    "LocationPermissionScreen": {
+        "enableLocationServices": "Obaveštenje o korišćenju lokacije",
+        "enableLocationPrompt": "Okur Fleet prikuplja vašu preciznu lokaciju kako bi dispečeri i kancelarija vaše firme u realnom vremenu videli vozače i napredak porudžbina, čak i kada je aplikacija zatvorena ili se ne koristi. Lokacija se prikuplja dok ste online i šalje se bezbedno.",
+        "shareAndContinue": "Dozvoli lokaciju i nastavi",
+        "privacyPolicy": "Politika privatnosti",
+        "permissionNeededTitle": "Potrebna je dozvola za lokaciju",
+        "enableInSettingsTitle": "Uključite lokaciju u podešavanjima",
+        "permissionDeniedPrompt": "Za prijavu je potreban pristup lokaciji. Želite li da dozvolite pristup sada?",
+        "locationBlockedPrompt": "Pristup lokaciji je blokiran. Otvorite podešavanja i uključite ga da biste nastavili.",
+        "goToSettings": "Idi na podešavanja"
+    },
+    "ui": {
+        "tabs": {
+            "dash": "Početna",
+            "orders": "Porudžbine",
+            "reports": "Izveštaji",
+            "chat": "Čet",
+            "account": "Nalog"
+        },
+        "yes": "Da",
+        "no": "Ne",
+        "na": "N/D",
+        "invalidPhone": "Uneti broj telefona nije ispravan.",
+        "tracker": {
+            "title": "Okur Fleet",
+            "description": "Lokacija se deli"
+        },
+        "dashboard": {
+            "tracking": "Praćenje:",
+            "location": "Lokacija:",
+            "latitude": "Geografska širina:",
+            "longitude": "Geografska dužina:",
+            "heading": "Pravac:",
+            "altitude": "Visina:",
+            "activeOrders": "Aktivne porudžbine",
+            "speed": "Brzina"
+        },
+        "order": {
+            "acceptOrder": "Prihvati porudžbinu",
+            "dismissOrder": "Odbij porudžbinu",
+            "startOrder": "Započni porudžbinu",
+            "updateActivity": "Ažuriraj status",
+            "startNavigation": "Pokreni navigaciju",
+            "orderInformation": "Informacije o porudžbini",
+            "internalId": "Interni ID",
+            "trackingNumber": "Broj za praćenje",
+            "proofOfDelivery": "Dokaz o isporuci",
+            "type": "Vrsta",
+            "dateCreated": "Datum kreiranja",
+            "dateScheduled": "Planirani datum",
+            "dateDispatched": "Datum dodele",
+            "orderRoute": "Ruta porudžbine",
+            "orderProgress": "Napredak porudžbine",
+            "currentDestination": "Trenutno odredište",
+            "nextDestination": "Sledeće odredište",
+            "totalDistance": "Ukupna udaljenost",
+            "startTime": "Vreme početka",
+            "currentEta": "Trenutno vreme dolaska",
+            "ect": "Procenjeni završetak",
+            "notDispatchedTitle": "Porudžbina još nije dodeljena",
+            "notDispatchedMessage": "Ova porudžbina još nije dodeljena. Da li ste sigurni da želite da nastavite?",
+            "warning": "Pažnja!",
+            "adhocAcceptTitle": "Prihvatiti hitnu porudžbinu?",
+            "adhocAcceptMessage": "Ako prihvatite ovu hitnu porudžbinu, biće vam dodeljena i odmah će početi.",
+            "adhocDismissTitle": "Odbiti hitnu porudžbinu?",
+            "adhocDismissMessage": "Ako odbijete ovu hitnu porudžbinu, više se neće prikazivati kao dostupna.",
+            "accept": "Prihvati",
+            "continue": "Nastavi"
+        },
+        "report": {
+            "issues": "Problemi",
+            "fuelReports": "Izveštaji o gorivu",
+            "status": "Status:",
+            "priority": "Prioritet:",
+            "report": "Izveštaj:",
+            "type": "Vrsta:",
+            "category": "Kategorija:",
+            "vehicle": "Vozilo:",
+            "reporter": "Podnosilac:",
+            "odometer": "Kilometraža:",
+            "volume": "Količina:",
+            "cost": "Trošak:"
+        }
+    }
+}

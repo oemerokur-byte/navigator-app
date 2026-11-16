@@ -1,0 +1,160 @@
+{
+    "common": {
+        "fleetbase": "Fleetbase",
+        "navigator": "Navigator",
+        "apiKey": "API anahtarı",
+        "cancel": "İptal",
+        "new": "Yeni",
+        "create": "Oluştur",
+        "save": "Kaydet",
+        "delete": "Sil",
+        "edit": "Düzenle",
+        "update": "Güncelle",
+        "service": "Hizmet",
+        "retry": "Tekrar dene",
+        "loading": "Yükleniyor...",
+        "confirm": "Onayla",
+        "confirmation": "Onay",
+        "ok": "Tamam",
+        "done": "Bitti",
+        "tryAgain": "Tekrar deneyin"
+    },
+    "orderStatuses": {
+        "created": "Oluşturuldu",
+        "preparing": "Hazırlanıyor",
+        "dispatched": "Atandı",
+        "driver_enroute": "Sürücü yolda",
+        "pending": "Beklemede",
+        "in_progress": "Devam ediyor",
+        "completed": "Tamamlandı"
+    },
+    "BootScreen": {
+        "missingRequiredConfigurationKeys": "Gerekli yapılandırma anahtarları eksik"
+    },
+    "AccountScreen": {
+        "changeProfilePhotoOptions": {
+            "takePhoto": "Fotoğraf çek",
+            "photoLibrary": "Fotoğraf arşivi",
+            "deleteProfilePhoto": "Profil fotoğrafını sil"
+        },
+        "profilePhoto": "Profil fotoğrafı",
+        "email": "E-posta",
+        "phoneNumber": "Telefon numarası",
+        "name": "Ad",
+        "language": "Dil",
+        "theme": "Tema",
+        "deleteAccount": "Hesabı sil",
+        "termsOfService": "Kullanım koşulları",
+        "privacyPolicy": "Gizlilik politikası",
+        "tracking": "Takip",
+        "account": "Hesap",
+        "dataProtection": "Veri koruma",
+        "clearCache": "Önbelleği temizle",
+        "signOut": "Çıkış yap",
+        "signedOut": "Çıkış yapıldı.",
+        "cacheCleared": "Önbellek temizlendi.",
+        "schemeChanged": "Artık {{selectedScheme}} modu kullanılıyor.",
+        "languageChanged": "Artık dil: {{selectedLanguage}}.",
+        "photoChanged": "Profil fotoğrafı değiştirildi.",
+        "photoRemoved": "Profil fotoğrafı kaldırıldı."
+    },
+    "ProfileScreen": {
+        "organizationChanged": "{{selectedOrganization}} kuruluşuna geçildi."
+    },
+    "AddNewLocationScreen": {
+        "addNewAddress": "Yeni adres ekle",
+        "streetName": "Sokak ve bina numarası",
+        "weThinkYoureAroundHere": "Buralarda olduğunuzu düşünüyoruz",
+        "cantFindYourAddress": "Adresinizi bulamıyor musunuz?",
+        "useMapInstead": "Bunun yerine harita kullanın"
+    },
+    "SetupWarningScreen": {
+        "configurationMissing": "Yapılandırma eksik!",
+        "unconfiguredApp": "Uygulama doğru yapılandırılmamış gibi görünüyor.",
+        "envMissing": "ortamda eksik!"
+    },
+    "LocationPermissionScreen": {
+        "enableLocationServices": "Konum kullanımı bildirimi",
+        "enableLocationPrompt": "Okur Fleet, şirketinizin sevk görevlilerinin ve ofisin sürücüleri ve sipariş ilerlemesini gerçek zamanlı görebilmesi için, uygulama kapalıyken veya kullanılmıyorken bile kesin konumunuzu toplar. Konum, siz çevrimiçi olduğunuz sürece toplanır ve güvenli şekilde iletilir.",
+        "shareAndContinue": "Konuma izin ver ve devam et",
+        "privacyPolicy": "Gizlilik politikası",
+        "permissionNeededTitle": "Konum izni gerekli",
+        "enableInSettingsTitle": "Ayarlardan konumu etkinleştirin",
+        "permissionDeniedPrompt": "Giriş yapmak için konum erişimi gereklidir. Erişime şimdi izin vermek ister misiniz?",
+        "locationBlockedPrompt": "Konum erişimi engellendi. Devam etmek için ayarları açıp etkinleştirin.",
+        "goToSettings": "Ayarlara git"
+    },
+    "ui": {
+        "tabs": {
+            "dash": "Ana sayfa",
+            "orders": "Siparişler",
+            "reports": "Raporlar",
+            "chat": "Sohbet",
+            "account": "Hesap"
+        },
+        "yes": "Evet",
+        "no": "Hayır",
+        "na": "Yok",
+        "invalidPhone": "Geçersiz telefon numarası girildi.",
+        "tracker": {
+            "title": "Okur Fleet",
+            "description": "Konum paylaşılıyor"
+        },
+        "dashboard": {
+            "tracking": "Takip:",
+            "location": "Konum:",
+            "latitude": "Enlem:",
+            "longitude": "Boylam:",
+            "heading": "Yön:",
+            "altitude": "Yükseklik:",
+            "activeOrders": "Aktif siparişler",
+            "speed": "Hız"
+        },
+        "order": {
+            "acceptOrder": "Siparişi kabul et",
+            "dismissOrder": "Siparişi reddet",
+            "startOrder": "Siparişi başlat",
+            "updateActivity": "Durumu güncelle",
+            "startNavigation": "Navigasyonu başlat",
+            "orderInformation": "Sipariş bilgileri",
+            "internalId": "Dahili kimlik",
+            "trackingNumber": "Takip numarası",
+            "proofOfDelivery": "Teslimat kanıtı",
+            "type": "Tür",
+            "dateCreated": "Oluşturulma tarihi",
+            "dateScheduled": "Planlanan tarih",
+            "dateDispatched": "Atanma tarihi",
+            "orderRoute": "Sipariş rotası",
+            "orderProgress": "Sipariş ilerlemesi",
+            "currentDestination": "Mevcut varış noktası",
+            "nextDestination": "Sonraki varış noktası",
+            "totalDistance": "Toplam mesafe",
+            "startTime": "Başlangıç saati",
+            "currentEta": "Güncel varış saati",
+            "ect": "Tahmini tamamlanma",
+            "notDispatchedTitle": "Sipariş henüz atanmadı",
+            "notDispatchedMessage": "Bu sipariş henüz atanmadı. Devam etmek istediğinizden emin misiniz?",
+            "warning": "Dikkat!",
+            "adhocAcceptTitle": "Acil sipariş kabul edilsin mi?",
+            "adhocAcceptMessage": "Bu acil siparişi kabul ederseniz size atanır ve hemen başlar.",
+            "adhocDismissTitle": "Acil sipariş reddedilsin mi?",
+            "adhocDismissMessage": "Bu acil siparişi reddederseniz artık mevcut sipariş olarak görünmez.",
+            "accept": "Kabul et",
+            "continue": "Devam"
+        },
+        "report": {
+            "issues": "Sorunlar",
+            "fuelReports": "Yakıt raporları",
+            "status": "Durum:",
+            "priority": "Öncelik:",
+            "report": "Rapor:",
+            "type": "Tür:",
+            "category": "Kategori:",
+            "vehicle": "Araç:",
+            "reporter": "Bildiren:",
+            "odometer": "Kilometre:",
+            "volume": "Hacim:",
+            "cost": "Maliyet:"
+        }
+    }
+}

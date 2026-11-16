@@ -1,0 +1,160 @@
+{
+    "common": {
+        "fleetbase": "Fleetbase",
+        "navigator": "Navigator",
+        "apiKey": "مفتاح API",
+        "cancel": "إلغاء",
+        "new": "جديد",
+        "create": "إنشاء",
+        "save": "حفظ",
+        "delete": "حذف",
+        "edit": "تعديل",
+        "update": "تحديث",
+        "service": "الخدمة",
+        "retry": "إعادة المحاولة",
+        "loading": "جارٍ التحميل...",
+        "confirm": "تأكيد",
+        "confirmation": "تأكيد",
+        "ok": "موافق",
+        "done": "تم",
+        "tryAgain": "حاول مرة أخرى"
+    },
+    "orderStatuses": {
+        "created": "تم الإنشاء",
+        "preparing": "قيد التجهيز",
+        "dispatched": "تم التعيين",
+        "driver_enroute": "السائق في الطريق",
+        "pending": "قيد الانتظار",
+        "in_progress": "قيد التنفيذ",
+        "completed": "مكتمل"
+    },
+    "BootScreen": {
+        "missingRequiredConfigurationKeys": "مفاتيح الإعداد المطلوبة مفقودة"
+    },
+    "AccountScreen": {
+        "changeProfilePhotoOptions": {
+            "takePhoto": "التقاط صورة",
+            "photoLibrary": "مكتبة الصور",
+            "deleteProfilePhoto": "حذف صورة الملف الشخصي"
+        },
+        "profilePhoto": "صورة الملف الشخصي",
+        "email": "البريد الإلكتروني",
+        "phoneNumber": "رقم الهاتف",
+        "name": "الاسم",
+        "language": "اللغة",
+        "theme": "المظهر",
+        "deleteAccount": "حذف الحساب",
+        "termsOfService": "شروط الاستخدام",
+        "privacyPolicy": "سياسة الخصوصية",
+        "tracking": "التتبع",
+        "account": "الحساب",
+        "dataProtection": "حماية البيانات",
+        "clearCache": "مسح الذاكرة المؤقتة",
+        "signOut": "تسجيل الخروج",
+        "signedOut": "تم تسجيل الخروج.",
+        "cacheCleared": "تم مسح الذاكرة المؤقتة.",
+        "schemeChanged": "يتم الآن استخدام وضع {{selectedScheme}}.",
+        "languageChanged": "يتم الآن استخدام اللغة: {{selectedLanguage}}.",
+        "photoChanged": "تم تغيير صورة الملف الشخصي.",
+        "photoRemoved": "تمت إزالة صورة الملف الشخصي."
+    },
+    "ProfileScreen": {
+        "organizationChanged": "تم التبديل إلى المؤسسة {{selectedOrganization}}."
+    },
+    "AddNewLocationScreen": {
+        "addNewAddress": "إضافة عنوان جديد",
+        "streetName": "اسم الشارع ورقم المبنى",
+        "weThinkYoureAroundHere": "نعتقد أنك في هذه المنطقة",
+        "cantFindYourAddress": "لا تجد عنوانك؟",
+        "useMapInstead": "استخدم الخريطة بدلاً من ذلك"
+    },
+    "SetupWarningScreen": {
+        "configurationMissing": "الإعدادات مفقودة!",
+        "unconfiguredApp": "يبدو أن التطبيق غير مهيأ بشكل صحيح.",
+        "envMissing": "مفقود من البيئة!"
+    },
+    "LocationPermissionScreen": {
+        "enableLocationServices": "إشعار استخدام الموقع",
+        "enableLocationPrompt": "يجمع تطبيق Okur Fleet موقعك الدقيق حتى يتمكن المنسقون ومكتب شركتك من رؤية السائقين وتقدم الطلبات في الوقت الفعلي، حتى عندما يكون التطبيق مغلقاً أو غير مستخدم. يتم جمع الموقع طالما أنت متصل ويُرسل بشكل آمن.",
+        "shareAndContinue": "السماح بالموقع والمتابعة",
+        "privacyPolicy": "سياسة الخصوصية",
+        "permissionNeededTitle": "إذن الموقع مطلوب",
+        "enableInSettingsTitle": "فعّل الموقع من الإعدادات",
+        "permissionDeniedPrompt": "الوصول إلى الموقع مطلوب لتسجيل الدخول. هل تريد السماح بالوصول الآن؟",
+        "locationBlockedPrompt": "تم حظر الوصول إلى الموقع. افتح الإعدادات وفعّله للمتابعة.",
+        "goToSettings": "الذهاب إلى الإعدادات"
+    },
+    "ui": {
+        "tabs": {
+            "dash": "الرئيسية",
+            "orders": "الطلبات",
+            "reports": "التقارير",
+            "chat": "المحادثة",
+            "account": "الحساب"
+        },
+        "yes": "نعم",
+        "no": "لا",
+        "na": "غير متاح",
+        "invalidPhone": "رقم الهاتف المُدخل غير صالح.",
+        "tracker": {
+            "title": "Okur Fleet",
+            "description": "تتم مشاركة الموقع"
+        },
+        "dashboard": {
+            "tracking": "التتبع:",
+            "location": "الموقع:",
+            "latitude": "خط العرض:",
+            "longitude": "خط الطول:",
+            "heading": "الاتجاه:",
+            "altitude": "الارتفاع:",
+            "activeOrders": "الطلبات النشطة",
+            "speed": "السرعة"
+        },
+        "order": {
+            "acceptOrder": "قبول الطلب",
+            "dismissOrder": "رفض الطلب",
+            "startOrder": "بدء الطلب",
+            "updateActivity": "تحديث الحالة",
+            "startNavigation": "بدء الملاحة",
+            "orderInformation": "معلومات الطلب",
+            "internalId": "المعرّف الداخلي",
+            "trackingNumber": "رقم التتبع",
+            "proofOfDelivery": "إثبات التسليم",
+            "type": "النوع",
+            "dateCreated": "تاريخ الإنشاء",
+            "dateScheduled": "التاريخ المجدول",
+            "dateDispatched": "تاريخ التعيين",
+            "orderRoute": "مسار الطلب",
+            "orderProgress": "تقدم الطلب",
+            "currentDestination": "الوجهة الحالية",
+            "nextDestination": "الوجهة التالية",
+            "totalDistance": "المسافة الإجمالية",
+            "startTime": "وقت البدء",
+            "currentEta": "وقت الوصول الحالي",
+            "ect": "الإنجاز المتوقع",
+            "notDispatchedTitle": "لم يتم تعيين الطلب بعد",
+            "notDispatchedMessage": "لم يتم تعيين هذا الطلب بعد. هل أنت متأكد أنك تريد المتابعة؟",
+            "warning": "تنبيه!",
+            "adhocAcceptTitle": "قبول الطلب العاجل؟",
+            "adhocAcceptMessage": "إذا قبلت هذا الطلب العاجل فسيتم تعيينه لك وسيبدأ فوراً.",
+            "adhocDismissTitle": "رفض الطلب العاجل؟",
+            "adhocDismissMessage": "إذا رفضت هذا الطلب العاجل فلن يظهر بعد الآن كطلب متاح.",
+            "accept": "قبول",
+            "continue": "متابعة"
+        },
+        "report": {
+            "issues": "المشكلات",
+            "fuelReports": "تقارير الوقود",
+            "status": "الحالة:",
+            "priority": "الأولوية:",
+            "report": "التقرير:",
+            "type": "النوع:",
+            "category": "الفئة:",
+            "vehicle": "المركبة:",
+            "reporter": "مقدم التقرير:",
+            "odometer": "عداد المسافة:",
+            "volume": "الكمية:",
+            "cost": "التكلفة:"
+        }
+    }
+}

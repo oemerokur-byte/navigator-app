@@ -15,8 +15,10 @@ import Badge from '../components/Badge';
 import Spacer from '../components/Spacer';
 import useStorage from '../hooks/use-storage';
 import useFleetbase from '../hooks/use-fleetbase';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const DriverReportScreen = () => {
+    const { t } = useLanguage();
     const theme = useTheme();
     const navigation = useNavigation();
     const { driver } = useAuth();
@@ -27,8 +29,8 @@ const DriverReportScreen = () => {
     const [currentTab, setCurrentTab] = useStorage('current_reports_tab', 'issue');
     const [isRefreshing, setIsRefreshing] = useState(false);
     const reportOptions = [
-        { value: 'issue', label: 'Issues' },
-        { value: 'fuel-report', label: 'Fuel Reports' },
+        { value: 'issue', label: t('ui.report.issues') },
+        { value: 'fuel-report', label: t('ui.report.fuelReports') },
     ];
     const currentIndex = reportOptions.findIndex((option) => option.value === currentTab);
     const content = useMemo(() => (currentTab === 'issue' ? issues : fuelReports), [currentTab, issues, fuelReports]);
@@ -107,16 +109,16 @@ const DriverReportScreen = () => {
                         <YStack pb='$2' px='$2' gap='$2'>
                             <XStack gap='$2'>
                                 <XStack gap='$2' alignItems='center'>
-                                    <Text fontWeight='bold'>Status:</Text>
+                                    <Text fontWeight='bold'>{t('ui.report.status')}</Text>
                                     <Badge status={issue.status} alignSelf='flex-start' py='$1' px='$2' borderRadius='$3' numberOfLines={1} />
                                 </XStack>
                                 <XStack gap='$2' alignItems='center'>
-                                    <Text fontWeight='bold'>Priority:</Text>
+                                    <Text fontWeight='bold'>{t('ui.report.priority')}</Text>
                                     <Badge status={issue.priority} alignSelf='flex-start' py='$1' px='$2' borderRadius='$3' numberOfLines={1} />
                                 </XStack>
                             </XStack>
                             <YStack flex={1} gap='$2'>
-                                <Text fontWeight='bold'>Report:</Text>
+                                <Text fontWeight='bold'>{t('ui.report.report')}</Text>
                                 <Text color='$textSecondary' numberOfLines={3}>
                                     {issue.report}
                                 </Text>
@@ -126,23 +128,23 @@ const DriverReportScreen = () => {
                         <YStack bg='$background' pb='$2' gap='$2' borderBottomLeftRadius='$4' borderBottomRightRadius='$4'>
                             <YStack gap='$3'>
                                 <XStack gap='$2' px='$3' justifyContent='space-between'>
-                                    <Text fontWeight='bold'>Type:</Text>
-                                    <Text numberOfLines={1}>{titleize(issue.type) ?? 'N/A'}</Text>
+                                    <Text fontWeight='bold'>{t('ui.report.type')}</Text>
+                                    <Text numberOfLines={1}>{titleize(issue.type) ?? t('ui.na')}</Text>
                                 </XStack>
                                 <Separator />
                                 <XStack gap='$2' px='$3' justifyContent='space-between'>
-                                    <Text fontWeight='bold'>Category:</Text>
-                                    <Text numberOfLines={1}>{titleize(issue.category) ?? 'N/A'}</Text>
+                                    <Text fontWeight='bold'>{t('ui.report.category')}</Text>
+                                    <Text numberOfLines={1}>{titleize(issue.category) ?? t('ui.na')}</Text>
                                 </XStack>
                                 <Separator />
                                 <XStack gap='$2' px='$3' justifyContent='space-between'>
-                                    <Text fontWeight='bold'>Vehicle:</Text>
-                                    <Text numberOfLines={1}>{issue.vehicle_name ?? 'N/A'}</Text>
+                                    <Text fontWeight='bold'>{t('ui.report.vehicle')}</Text>
+                                    <Text numberOfLines={1}>{issue.vehicle_name ?? t('ui.na')}</Text>
                                 </XStack>
                                 <Separator />
                                 <XStack gap='$2' px='$3' pb='$2' justifyContent='space-between'>
-                                    <Text fontWeight='bold'>Reporter:</Text>
-                                    <Text numberOfLines={1}>{issue.reporter_name ?? 'N/A'}</Text>
+                                    <Text fontWeight='bold'>{t('ui.report.reporter')}</Text>
+                                    <Text numberOfLines={1}>{issue.reporter_name ?? t('ui.na')}</Text>
                                 </XStack>
                             </YStack>
                         </YStack>
@@ -181,7 +183,7 @@ const DriverReportScreen = () => {
                         </XStack>
                         <YStack px='$2' gap='$3'>
                             <XStack gap='$2' alignItems='center'>
-                                <Text fontWeight='bold'>Status:</Text>
+                                <Text fontWeight='bold'>{t('ui.report.status')}</Text>
                                 <Badge status={fuelReport.status} alignSelf='flex-start' py='$1' px='$2' borderRadius='$3' numberOfLines={1} />
                             </XStack>
                             <XStack space='$2'>
@@ -200,18 +202,18 @@ const DriverReportScreen = () => {
                         <YStack bg='$background' pb='$2' gap='$2' borderBottomLeftRadius='$4' borderBottomRightRadius='$4'>
                             <YStack gap='$3'>
                                 <XStack gap='$2' px='$3' justifyContent='space-between'>
-                                    <Text fontWeight='bold'>Odometer:</Text>
-                                    <Text numberOfLines={1}>{fuelReport.odometer ?? 'N/A'}</Text>
+                                    <Text fontWeight='bold'>{t('ui.report.odometer')}</Text>
+                                    <Text numberOfLines={1}>{fuelReport.odometer ?? t('ui.na')}</Text>
                                 </XStack>
                                 <Separator />
                                 <XStack gap='$2' px='$3' justifyContent='space-between'>
-                                    <Text fontWeight='bold'>Volume:</Text>
-                                    <Text numberOfLines={1}>{`${fuelReport.volume} ${fuelReport.metric_unit}` ?? 'N/A'}</Text>
+                                    <Text fontWeight='bold'>{t('ui.report.volume')}</Text>
+                                    <Text numberOfLines={1}>{`${fuelReport.volume} ${fuelReport.metric_unit}` ?? t('ui.na')}</Text>
                                 </XStack>
                                 <Separator />
                                 <XStack gap='$2' px='$3' pb='$2' justifyContent='space-between'>
-                                    <Text fontWeight='bold'>Cost:</Text>
-                                    <Text numberOfLines={1}>{formatCurrency(fuelReport.amount, fuelReport.currency) ?? 'N/A'}</Text>
+                                    <Text fontWeight='bold'>{t('ui.report.cost')}</Text>
+                                    <Text numberOfLines={1}>{formatCurrency(fuelReport.amount, fuelReport.currency) ?? t('ui.na')}</Text>
                                 </XStack>
                             </YStack>
                         </YStack>

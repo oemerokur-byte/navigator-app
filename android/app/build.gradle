@@ -20,9 +20,6 @@ def resolveNodeExecutable() {
 
 ext.REACT_NATIVE_NODE_MODULES_DIR = file("$rootDir/../node_modules/react-native").absolutePath
 
-// background-geolocation
-Project background_geolocation = project(':react-native-background-geolocation')
-apply from: "${background_geolocation.projectDir}/app.gradle"
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -112,7 +109,6 @@ android {
         ]
         resValue "string", "build_config_package", "io.fleetbase.navigator"
         resValue "string", "app_name", project.env.get("APP_NAME") ?: "Navigator"
-        resValue "string", "TRANSISTORSOFT_LICENSE_KEY_ANDROID", project.env.get("TRANSISTORSOFT_LICENSE_KEY_ANDROID") ?: project.env.get("TRANSISTORSOFT_LICENSE_KEY") ?: ""
     }
     signingConfigs {
         release {

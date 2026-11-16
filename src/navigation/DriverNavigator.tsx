@@ -24,6 +24,7 @@ import { format } from 'date-fns';
 import { PortalHost } from '@gorhom/portal';
 import { useIsNotAuthenticated, useIsAuthenticated } from '../contexts/AuthContext';
 import { useTempStore } from '../contexts/TempStoreContext';
+import { useLanguage } from '../contexts/LanguageContext';
 import DriverDashboardScreen from '../screens/DriverDashboardScreen';
 import DriverOrderManagementScreen from '../screens/DriverOrderManagementScreen';
 import OrderScreen from '../screens/OrderScreen';
@@ -81,17 +82,21 @@ function createTabScreens() {
     const screens = {
         DriverDashboardTab: {
             screen: DriverDashboardTab,
-            options: {
-                tabBarLabel: config('DRIVER_DASHBOARD_TAB_LABEL', 'Dash'),
+            options: () => {
+                const { t } = useLanguage();
+                return {
+                    tabBarLabel: t('ui.tabs.dash'),
+                };
             },
         },
         DriverTaskTab: {
             screen: DriverTaskTab,
             options: () => {
                 const { allActiveOrders } = useOrderManager();
+                const { t } = useLanguage();
 
                 return {
-                    tabBarLabel: config('DRIVER_ORDER_TAB_LABEL', 'Orders'),
+                    tabBarLabel: t('ui.tabs.orders'),
                     tabBarBadge: allActiveOrders.length,
                     tabBarBadgeStyle: {
                         marginRight: -5,
@@ -103,8 +108,9 @@ function createTabScreens() {
         DriverReportTab: {
             screen: DriverReportTab,
             options: () => {
+                const { t } = useLanguage();
                 return {
-                    tabBarLabel: config('DRIVER_REPORT_TAB_LABEL', 'Reports'),
+                    tabBarLabel: t('ui.tabs.reports'),
                 };
             },
         },
@@ -112,9 +118,10 @@ function createTabScreens() {
             screen: DriverChatTab,
             options: () => {
                 const { unreadCount } = useChat();
+                const { t } = useLanguage();
 
                 return {
-                    tabBarLabel: config('DRIVER_CHAT_TAB_LABEL', 'Chat'),
+                    tabBarLabel: t('ui.tabs.chat'),
                     tabBarBadge: unreadCount,
                     tabBarBadgeStyle: {
                         marginRight: -5,
@@ -126,8 +133,9 @@ function createTabScreens() {
         DriverAccountTab: {
             screen: DriverAccountTab,
             options: () => {
+                const { t } = useLanguage();
                 return {
-                    tabBarLabel: config('DRIVER_ACCOUNT_TAB_LABEL', 'Account'),
+                    tabBarLabel: t('ui.tabs.account'),
                 };
             },
         },

@@ -1,0 +1,160 @@
+{
+    "common": {
+        "fleetbase": "Fleetbase",
+        "navigator": "Navigator",
+        "apiKey": "API-ключ",
+        "cancel": "Отмена",
+        "new": "Новый",
+        "create": "Создать",
+        "save": "Сохранить",
+        "delete": "Удалить",
+        "edit": "Изменить",
+        "update": "Обновить",
+        "service": "Услуга",
+        "retry": "Повторить",
+        "loading": "Загрузка...",
+        "confirm": "Подтвердить",
+        "confirmation": "Подтверждение",
+        "ok": "OK",
+        "done": "Готово",
+        "tryAgain": "Повторить попытку"
+    },
+    "orderStatuses": {
+        "created": "Создан",
+        "preparing": "Готовится",
+        "dispatched": "Назначен",
+        "driver_enroute": "Водитель в пути",
+        "pending": "Ожидает",
+        "in_progress": "Выполняется",
+        "completed": "Завершён"
+    },
+    "BootScreen": {
+        "missingRequiredConfigurationKeys": "Отсутствуют обязательные ключи конфигурации"
+    },
+    "AccountScreen": {
+        "changeProfilePhotoOptions": {
+            "takePhoto": "Сделать фото",
+            "photoLibrary": "Фотогалерея",
+            "deleteProfilePhoto": "Удалить фото профиля"
+        },
+        "profilePhoto": "Фото профиля",
+        "email": "Электронная почта",
+        "phoneNumber": "Номер телефона",
+        "name": "Имя",
+        "language": "Язык",
+        "theme": "Тема",
+        "deleteAccount": "Удалить аккаунт",
+        "termsOfService": "Условия использования",
+        "privacyPolicy": "Политика конфиденциальности",
+        "tracking": "Отслеживание",
+        "account": "Аккаунт",
+        "dataProtection": "Защита данных",
+        "clearCache": "Очистить кэш",
+        "signOut": "Выйти",
+        "signedOut": "Вы вышли.",
+        "cacheCleared": "Кэш очищен.",
+        "schemeChanged": "Теперь используется режим {{selectedScheme}}.",
+        "languageChanged": "Теперь используется язык: {{selectedLanguage}}.",
+        "photoChanged": "Фото профиля изменено.",
+        "photoRemoved": "Фото профиля удалено."
+    },
+    "ProfileScreen": {
+        "organizationChanged": "Переключено на организацию {{selectedOrganization}}."
+    },
+    "AddNewLocationScreen": {
+        "addNewAddress": "Добавить новый адрес",
+        "streetName": "Улица и номер дома",
+        "weThinkYoureAroundHere": "Похоже, вы где-то рядом",
+        "cantFindYourAddress": "Не нашли свой адрес?",
+        "useMapInstead": "Воспользуйтесь картой"
+    },
+    "SetupWarningScreen": {
+        "configurationMissing": "Отсутствует конфигурация!",
+        "unconfiguredApp": "Похоже, приложение настроено неправильно.",
+        "envMissing": "отсутствует в окружении!"
+    },
+    "LocationPermissionScreen": {
+        "enableLocationServices": "Уведомление об использовании геолокации",
+        "enableLocationPrompt": "Okur Fleet собирает точные данные о вашем местоположении, чтобы диспетчеры и офис вашей компании видели водителей и ход выполнения заказов в реальном времени, даже когда приложение закрыто или не используется. Геолокация собирается, пока вы онлайн, и передаётся безопасно.",
+        "shareAndContinue": "Разрешить геолокацию и продолжить",
+        "privacyPolicy": "Политика конфиденциальности",
+        "permissionNeededTitle": "Требуется разрешение на геолокацию",
+        "enableInSettingsTitle": "Включите геолокацию в настройках",
+        "permissionDeniedPrompt": "Для входа требуется доступ к геолокации. Разрешить доступ сейчас?",
+        "locationBlockedPrompt": "Доступ к геолокации заблокирован. Откройте настройки и включите его, чтобы продолжить.",
+        "goToSettings": "Перейти в настройки"
+    },
+    "ui": {
+        "tabs": {
+            "dash": "Главная",
+            "orders": "Заказы",
+            "reports": "Отчёты",
+            "chat": "Чат",
+            "account": "Профиль"
+        },
+        "yes": "Да",
+        "no": "Нет",
+        "na": "Н/д",
+        "invalidPhone": "Указан недействительный номер телефона.",
+        "tracker": {
+            "title": "Okur Fleet",
+            "description": "Геолокация передаётся"
+        },
+        "dashboard": {
+            "tracking": "Отслеживание:",
+            "location": "Местоположение:",
+            "latitude": "Широта:",
+            "longitude": "Долгота:",
+            "heading": "Направление:",
+            "altitude": "Высота:",
+            "activeOrders": "Активные заказы",
+            "speed": "Скорость"
+        },
+        "order": {
+            "acceptOrder": "Принять заказ",
+            "dismissOrder": "Отклонить заказ",
+            "startOrder": "Начать заказ",
+            "updateActivity": "Обновить статус",
+            "startNavigation": "Начать навигацию",
+            "orderInformation": "Информация о заказе",
+            "internalId": "Внутренний ID",
+            "trackingNumber": "Номер отслеживания",
+            "proofOfDelivery": "Подтверждение доставки",
+            "type": "Тип",
+            "dateCreated": "Дата создания",
+            "dateScheduled": "Запланировано на",
+            "dateDispatched": "Дата назначения",
+            "orderRoute": "Маршрут заказа",
+            "orderProgress": "Ход выполнения заказа",
+            "currentDestination": "Текущий пункт назначения",
+            "nextDestination": "Следующий пункт назначения",
+            "totalDistance": "Общее расстояние",
+            "startTime": "Время начала",
+            "currentEta": "Текущее время прибытия",
+            "ect": "Ожидаемое завершение",
+            "notDispatchedTitle": "Заказ ещё не назначен",
+            "notDispatchedMessage": "Этот заказ ещё не назначен. Вы уверены, что хотите продолжить?",
+            "warning": "Внимание!",
+            "adhocAcceptTitle": "Принять срочный заказ?",
+            "adhocAcceptMessage": "Если вы примете этот срочный заказ, он будет назначен вам и начнётся немедленно.",
+            "adhocDismissTitle": "Отклонить срочный заказ?",
+            "adhocDismissMessage": "Если вы отклоните этот срочный заказ, он больше не будет отображаться как доступный.",
+            "accept": "Принять",
+            "continue": "Продолжить"
+        },
+        "report": {
+            "issues": "Проблемы",
+            "fuelReports": "Отчёты о топливе",
+            "status": "Статус:",
+            "priority": "Приоритет:",
+            "report": "Отчёт:",
+            "type": "Тип:",
+            "category": "Категория:",
+            "vehicle": "Транспортное средство:",
+            "reporter": "Автор отчёта:",
+            "odometer": "Одометр:",
+            "volume": "Объём:",
+            "cost": "Стоимость:"
+        }
+    }
+}

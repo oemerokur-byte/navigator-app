@@ -1,0 +1,160 @@
+{
+    "common": {
+        "fleetbase": "Fleetbase",
+        "navigator": "Navigator",
+        "apiKey": "Cheie API",
+        "cancel": "Anulează",
+        "new": "Nou",
+        "create": "Creează",
+        "save": "Salvează",
+        "delete": "Șterge",
+        "edit": "Editează",
+        "update": "Actualizează",
+        "service": "Serviciu",
+        "retry": "Reîncearcă",
+        "loading": "Se încarcă...",
+        "confirm": "Confirmă",
+        "confirmation": "Confirmare",
+        "ok": "OK",
+        "done": "Gata",
+        "tryAgain": "Încearcă din nou"
+    },
+    "orderStatuses": {
+        "created": "Creată",
+        "preparing": "În pregătire",
+        "dispatched": "Repartizată",
+        "driver_enroute": "Șoferul este pe drum",
+        "pending": "În așteptare",
+        "in_progress": "În desfășurare",
+        "completed": "Finalizată"
+    },
+    "BootScreen": {
+        "missingRequiredConfigurationKeys": "Lipsesc cheile de configurare necesare"
+    },
+    "AccountScreen": {
+        "changeProfilePhotoOptions": {
+            "takePhoto": "Fă o fotografie",
+            "photoLibrary": "Galerie foto",
+            "deleteProfilePhoto": "Șterge fotografia de profil"
+        },
+        "profilePhoto": "Fotografie de profil",
+        "email": "E-mail",
+        "phoneNumber": "Număr de telefon",
+        "name": "Nume",
+        "language": "Limbă",
+        "theme": "Temă",
+        "deleteAccount": "Șterge contul",
+        "termsOfService": "Termeni și condiții",
+        "privacyPolicy": "Politica de confidențialitate",
+        "tracking": "Urmărire",
+        "account": "Cont",
+        "dataProtection": "Protecția datelor",
+        "clearCache": "Șterge memoria cache",
+        "signOut": "Deconectare",
+        "signedOut": "Ați fost deconectat.",
+        "cacheCleared": "Memoria cache a fost ștearsă.",
+        "schemeChanged": "Se folosește acum modul {{selectedScheme}}.",
+        "languageChanged": "Se folosește acum limba: {{selectedLanguage}}.",
+        "photoChanged": "Fotografia de profil a fost schimbată.",
+        "photoRemoved": "Fotografia de profil a fost ștearsă."
+    },
+    "ProfileScreen": {
+        "organizationChanged": "Ați trecut la organizația {{selectedOrganization}}."
+    },
+    "AddNewLocationScreen": {
+        "addNewAddress": "Adaugă o adresă nouă",
+        "streetName": "Strada și numărul",
+        "weThinkYoureAroundHere": "Credem că sunteți pe aproape",
+        "cantFindYourAddress": "Nu găsiți adresa?",
+        "useMapInstead": "Folosiți o hartă"
+    },
+    "SetupWarningScreen": {
+        "configurationMissing": "Lipsește configurarea!",
+        "unconfiguredApp": "Se pare că aplicația nu este configurată corect.",
+        "envMissing": "lipsește din mediu!"
+    },
+    "LocationPermissionScreen": {
+        "enableLocationServices": "Notificare privind utilizarea locației",
+        "enableLocationPrompt": "Okur Fleet colectează locația dvs. exactă pentru ca dispecerii și biroul companiei să vadă șoferii și progresul comenzilor în timp real, chiar și atunci când aplicația este închisă sau nu este folosită. Locația este colectată cât timp sunteți online și este transmisă în siguranță.",
+        "shareAndContinue": "Permite locația și continuă",
+        "privacyPolicy": "Politica de confidențialitate",
+        "permissionNeededTitle": "Este necesară permisiunea de locație",
+        "enableInSettingsTitle": "Activați locația din setări",
+        "permissionDeniedPrompt": "Accesul la locație este necesar pentru autentificare. Doriți să permiteți accesul acum?",
+        "locationBlockedPrompt": "Accesul la locație a fost blocat. Deschideți setările și activați-l pentru a continua.",
+        "goToSettings": "Mergi la setări"
+    },
+    "ui": {
+        "tabs": {
+            "dash": "Acasă",
+            "orders": "Comenzi",
+            "reports": "Rapoarte",
+            "chat": "Chat",
+            "account": "Cont"
+        },
+        "yes": "Da",
+        "no": "Nu",
+        "na": "N/A",
+        "invalidPhone": "Număr de telefon invalid.",
+        "tracker": {
+            "title": "Okur Fleet",
+            "description": "Locația este transmisă"
+        },
+        "dashboard": {
+            "tracking": "Urmărire:",
+            "location": "Locație:",
+            "latitude": "Latitudine:",
+            "longitude": "Longitudine:",
+            "heading": "Direcție:",
+            "altitude": "Altitudine:",
+            "activeOrders": "Comenzi active",
+            "speed": "Viteză"
+        },
+        "order": {
+            "acceptOrder": "Acceptă comanda",
+            "dismissOrder": "Respinge comanda",
+            "startOrder": "Începe comanda",
+            "updateActivity": "Actualizează starea",
+            "startNavigation": "Începe navigarea",
+            "orderInformation": "Informații despre comandă",
+            "internalId": "ID intern",
+            "trackingNumber": "Număr de urmărire",
+            "proofOfDelivery": "Dovada livrării",
+            "type": "Tip",
+            "dateCreated": "Data creării",
+            "dateScheduled": "Data programată",
+            "dateDispatched": "Data repartizării",
+            "orderRoute": "Traseul comenzii",
+            "orderProgress": "Progresul comenzii",
+            "currentDestination": "Destinația curentă",
+            "nextDestination": "Următoarea destinație",
+            "totalDistance": "Distanța totală",
+            "startTime": "Ora de începere",
+            "currentEta": "Ora curentă de sosire",
+            "ect": "Finalizare estimată",
+            "notDispatchedTitle": "Comanda nu a fost încă repartizată",
+            "notDispatchedMessage": "Această comandă nu a fost încă repartizată. Sigur doriți să continuați?",
+            "warning": "Atenție!",
+            "adhocAcceptTitle": "Acceptați comanda urgentă?",
+            "adhocAcceptMessage": "Dacă acceptați această comandă urgentă, vă va fi atribuită și va începe imediat.",
+            "adhocDismissTitle": "Respingeți comanda urgentă?",
+            "adhocDismissMessage": "Dacă respingeți această comandă urgentă, nu va mai fi afișată ca disponibilă.",
+            "accept": "Acceptă",
+            "continue": "Continuă"
+        },
+        "report": {
+            "issues": "Probleme",
+            "fuelReports": "Rapoarte de combustibil",
+            "status": "Stare:",
+            "priority": "Prioritate:",
+            "report": "Raport:",
+            "type": "Tip:",
+            "category": "Categorie:",
+            "vehicle": "Vehicul:",
+            "reporter": "Raportor:",
+            "odometer": "Kilometraj:",
+            "volume": "Volum:",
+            "cost": "Cost:"
+        }
+    }
+}

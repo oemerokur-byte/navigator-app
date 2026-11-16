@@ -1,0 +1,160 @@
+{
+    "common": {
+        "fleetbase": "Fleetbase",
+        "navigator": "Navigator",
+        "apiKey": "Clave API",
+        "cancel": "Cancelar",
+        "new": "Nuevo",
+        "create": "Crear",
+        "save": "Guardar",
+        "delete": "Eliminar",
+        "edit": "Editar",
+        "update": "Actualizar",
+        "service": "Servicio",
+        "retry": "Reintentar",
+        "loading": "Cargando...",
+        "confirm": "Confirmar",
+        "confirmation": "Confirmación",
+        "ok": "Aceptar",
+        "done": "Hecho",
+        "tryAgain": "Intentar de nuevo"
+    },
+    "orderStatuses": {
+        "created": "Creado",
+        "preparing": "En preparación",
+        "dispatched": "Asignado",
+        "driver_enroute": "Conductor en camino",
+        "pending": "Pendiente",
+        "in_progress": "En curso",
+        "completed": "Completado"
+    },
+    "BootScreen": {
+        "missingRequiredConfigurationKeys": "Faltan claves de configuración obligatorias"
+    },
+    "AccountScreen": {
+        "changeProfilePhotoOptions": {
+            "takePhoto": "Hacer una foto",
+            "photoLibrary": "Galería de fotos",
+            "deleteProfilePhoto": "Eliminar foto de perfil"
+        },
+        "profilePhoto": "Foto de perfil",
+        "email": "Correo electrónico",
+        "phoneNumber": "Número de teléfono",
+        "name": "Nombre",
+        "language": "Idioma",
+        "theme": "Tema",
+        "deleteAccount": "Eliminar cuenta",
+        "termsOfService": "Condiciones de uso",
+        "privacyPolicy": "Política de privacidad",
+        "tracking": "Seguimiento",
+        "account": "Cuenta",
+        "dataProtection": "Protección de datos",
+        "clearCache": "Borrar caché",
+        "signOut": "Cerrar sesión",
+        "signedOut": "Sesión cerrada.",
+        "cacheCleared": "Caché borrada.",
+        "schemeChanged": "Ahora se usa el modo {{selectedScheme}}.",
+        "languageChanged": "Ahora se usa el idioma: {{selectedLanguage}}.",
+        "photoChanged": "Foto de perfil cambiada.",
+        "photoRemoved": "Foto de perfil eliminada."
+    },
+    "ProfileScreen": {
+        "organizationChanged": "Cambiado a la organización {{selectedOrganization}}."
+    },
+    "AddNewLocationScreen": {
+        "addNewAddress": "Añadir nueva dirección",
+        "streetName": "Calle y número",
+        "weThinkYoureAroundHere": "Creemos que estás por aquí cerca",
+        "cantFindYourAddress": "¿No encuentras tu dirección?",
+        "useMapInstead": "Usa un mapa"
+    },
+    "SetupWarningScreen": {
+        "configurationMissing": "¡Falta la configuración!",
+        "unconfiguredApp": "Parece que la aplicación no está bien configurada.",
+        "envMissing": "¡falta en el entorno!"
+    },
+    "LocationPermissionScreen": {
+        "enableLocationServices": "Aviso sobre el uso de la ubicación",
+        "enableLocationPrompt": "Okur Fleet recopila tu ubicación exacta para que los despachadores y la oficina de tu empresa vean a los conductores y el progreso de los pedidos en tiempo real, incluso cuando la aplicación está cerrada o no se usa. La ubicación se recopila mientras estás en línea y se envía de forma segura.",
+        "shareAndContinue": "Permitir ubicación y continuar",
+        "privacyPolicy": "Política de privacidad",
+        "permissionNeededTitle": "Se necesita permiso de ubicación",
+        "enableInSettingsTitle": "Activa la ubicación en los ajustes",
+        "permissionDeniedPrompt": "Se necesita acceso a la ubicación para iniciar sesión. ¿Quieres permitir el acceso ahora?",
+        "locationBlockedPrompt": "El acceso a la ubicación está bloqueado. Abre los ajustes y actívalo para continuar.",
+        "goToSettings": "Ir a ajustes"
+    },
+    "ui": {
+        "tabs": {
+            "dash": "Inicio",
+            "orders": "Pedidos",
+            "reports": "Informes",
+            "chat": "Chat",
+            "account": "Cuenta"
+        },
+        "yes": "Sí",
+        "no": "No",
+        "na": "N/D",
+        "invalidPhone": "El número de teléfono no es válido.",
+        "tracker": {
+            "title": "Okur Fleet",
+            "description": "Se está compartiendo la ubicación"
+        },
+        "dashboard": {
+            "tracking": "Seguimiento:",
+            "location": "Ubicación:",
+            "latitude": "Latitud:",
+            "longitude": "Longitud:",
+            "heading": "Rumbo:",
+            "altitude": "Altitud:",
+            "activeOrders": "Pedidos activos",
+            "speed": "Velocidad"
+        },
+        "order": {
+            "acceptOrder": "Aceptar pedido",
+            "dismissOrder": "Rechazar pedido",
+            "startOrder": "Iniciar pedido",
+            "updateActivity": "Actualizar estado",
+            "startNavigation": "Iniciar navegación",
+            "orderInformation": "Información del pedido",
+            "internalId": "ID interno",
+            "trackingNumber": "Número de seguimiento",
+            "proofOfDelivery": "Prueba de entrega",
+            "type": "Tipo",
+            "dateCreated": "Fecha de creación",
+            "dateScheduled": "Fecha programada",
+            "dateDispatched": "Fecha de asignación",
+            "orderRoute": "Ruta del pedido",
+            "orderProgress": "Progreso del pedido",
+            "currentDestination": "Destino actual",
+            "nextDestination": "Siguiente destino",
+            "totalDistance": "Distancia total",
+            "startTime": "Hora de inicio",
+            "currentEta": "Hora de llegada actual",
+            "ect": "Finalización estimada",
+            "notDispatchedTitle": "Pedido aún no asignado",
+            "notDispatchedMessage": "Este pedido aún no ha sido asignado. ¿Seguro que quieres continuar?",
+            "warning": "¡Atención!",
+            "adhocAcceptTitle": "¿Aceptar pedido urgente?",
+            "adhocAcceptMessage": "Si aceptas este pedido urgente, se te asignará y empezará de inmediato.",
+            "adhocDismissTitle": "¿Rechazar pedido urgente?",
+            "adhocDismissMessage": "Si rechazas este pedido urgente, dejará de mostrarse como disponible.",
+            "accept": "Aceptar",
+            "continue": "Continuar"
+        },
+        "report": {
+            "issues": "Incidencias",
+            "fuelReports": "Informes de combustible",
+            "status": "Estado:",
+            "priority": "Prioridad:",
+            "report": "Informe:",
+            "type": "Tipo:",
+            "category": "Categoría:",
+            "vehicle": "Vehículo:",
+            "reporter": "Informante:",
+            "odometer": "Kilometraje:",
+            "volume": "Volumen:",
+            "cost": "Coste:"
+        }
+    }
+}

@@ -1,0 +1,160 @@
+{
+    "common": {
+        "fleetbase": "Fleetbase",
+        "navigator": "Navigator",
+        "apiKey": "API-Schlüssel",
+        "cancel": "Abbrechen",
+        "new": "Neu",
+        "create": "Erstellen",
+        "save": "Speichern",
+        "delete": "Löschen",
+        "edit": "Bearbeiten",
+        "update": "Aktualisieren",
+        "service": "Service",
+        "retry": "Erneut versuchen",
+        "loading": "Wird geladen ...",
+        "confirm": "Bestätigen",
+        "confirmation": "Bestätigung",
+        "ok": "OK",
+        "done": "Fertig",
+        "tryAgain": "Erneut versuchen"
+    },
+    "orderStatuses": {
+        "created": "Erstellt",
+        "preparing": "In Vorbereitung",
+        "dispatched": "Disponiert",
+        "driver_enroute": "Fahrer unterwegs",
+        "pending": "Ausstehend",
+        "in_progress": "In Bearbeitung",
+        "completed": "Abgeschlossen"
+    },
+    "BootScreen": {
+        "missingRequiredConfigurationKeys": "Erforderliche Konfigurationsschlüssel fehlen"
+    },
+    "AccountScreen": {
+        "changeProfilePhotoOptions": {
+            "takePhoto": "Foto aufnehmen",
+            "photoLibrary": "Fotobibliothek",
+            "deleteProfilePhoto": "Profilfoto löschen"
+        },
+        "profilePhoto": "Profilfoto",
+        "email": "E-Mail",
+        "phoneNumber": "Telefonnummer",
+        "name": "Name",
+        "language": "Sprache",
+        "theme": "Design",
+        "deleteAccount": "Konto löschen",
+        "termsOfService": "Nutzungsbedingungen",
+        "privacyPolicy": "Datenschutzerklärung",
+        "tracking": "Standortverfolgung",
+        "account": "Konto",
+        "dataProtection": "Datenschutz",
+        "clearCache": "Cache leeren",
+        "signOut": "Abmelden",
+        "signedOut": "Abgemeldet.",
+        "cacheCleared": "Cache geleert.",
+        "schemeChanged": "Es wird jetzt der Modus {{selectedScheme}} verwendet.",
+        "languageChanged": "Es wird jetzt {{selectedLanguage}} verwendet.",
+        "photoChanged": "Profilfoto geändert.",
+        "photoRemoved": "Profilfoto entfernt."
+    },
+    "ProfileScreen": {
+        "organizationChanged": "Zur Organisation {{selectedOrganization}} gewechselt."
+    },
+    "AddNewLocationScreen": {
+        "addNewAddress": "Neue Adresse hinzufügen",
+        "streetName": "Straße und Hausnummer",
+        "weThinkYoureAroundHere": "Wir vermuten, Sie sind hier in der Nähe",
+        "cantFindYourAddress": "Adresse nicht gefunden?",
+        "useMapInstead": "Stattdessen eine Karte verwenden"
+    },
+    "SetupWarningScreen": {
+        "configurationMissing": "Konfiguration fehlt!",
+        "unconfiguredApp": "Die App scheint nicht richtig konfiguriert zu sein.",
+        "envMissing": "fehlt in der Umgebung!"
+    },
+    "LocationPermissionScreen": {
+        "enableLocationServices": "Hinweis zur Standortnutzung",
+        "enableLocationPrompt": "Okur Fleet erfasst Ihren genauen Standort, damit die Disposition und das Büro Ihres Unternehmens Fahrer und Auftragsfortschritt in Echtzeit sehen können, auch wenn die App geschlossen ist oder nicht verwendet wird. Der Standort wird erfasst, solange Sie online sind, und sicher übertragen.",
+        "shareAndContinue": "Standort erlauben und weiter",
+        "privacyPolicy": "Datenschutzerklärung",
+        "permissionNeededTitle": "Standortberechtigung erforderlich",
+        "enableInSettingsTitle": "Standort in den Einstellungen aktivieren",
+        "permissionDeniedPrompt": "Der Standortzugriff ist für die Anmeldung erforderlich. Möchten Sie den Zugriff jetzt erlauben?",
+        "locationBlockedPrompt": "Der Standortzugriff wurde blockiert. Bitte öffnen Sie die Einstellungen und aktivieren Sie ihn, um fortzufahren.",
+        "goToSettings": "Zu den Einstellungen"
+    },
+    "ui": {
+        "tabs": {
+            "dash": "Start",
+            "orders": "Aufträge",
+            "reports": "Berichte",
+            "chat": "Chat",
+            "account": "Konto"
+        },
+        "yes": "Ja",
+        "no": "Nein",
+        "na": "k. A.",
+        "invalidPhone": "Ungültige Telefonnummer.",
+        "tracker": {
+            "title": "Okur Fleet",
+            "description": "Standort wird übertragen"
+        },
+        "dashboard": {
+            "tracking": "Verfolgung:",
+            "location": "Standort:",
+            "latitude": "Breitengrad:",
+            "longitude": "Längengrad:",
+            "heading": "Richtung:",
+            "altitude": "Höhe:",
+            "activeOrders": "Aktive Aufträge",
+            "speed": "Geschwindigkeit"
+        },
+        "order": {
+            "acceptOrder": "Auftrag annehmen",
+            "dismissOrder": "Auftrag ablehnen",
+            "startOrder": "Auftrag starten",
+            "updateActivity": "Status aktualisieren",
+            "startNavigation": "Navigation starten",
+            "orderInformation": "Auftragsinformationen",
+            "internalId": "Interne ID",
+            "trackingNumber": "Sendungsnummer",
+            "proofOfDelivery": "Liefernachweis",
+            "type": "Typ",
+            "dateCreated": "Erstellt am",
+            "dateScheduled": "Geplant für",
+            "dateDispatched": "Disponiert am",
+            "orderRoute": "Auftragsroute",
+            "orderProgress": "Auftragsfortschritt",
+            "currentDestination": "Aktuelles Ziel",
+            "nextDestination": "Nächstes Ziel",
+            "totalDistance": "Gesamtstrecke",
+            "startTime": "Startzeit",
+            "currentEta": "Aktuelle Ankunftszeit",
+            "ect": "Vorauss. Fertigstellung",
+            "notDispatchedTitle": "Auftrag noch nicht disponiert",
+            "notDispatchedMessage": "Dieser Auftrag wurde noch nicht disponiert. Möchten Sie trotzdem fortfahren?",
+            "warning": "Achtung!",
+            "adhocAcceptTitle": "Ad-hoc-Auftrag annehmen?",
+            "adhocAcceptMessage": "Wenn Sie diesen Ad-hoc-Auftrag annehmen, wird er Ihnen zugewiesen und sofort gestartet.",
+            "adhocDismissTitle": "Ad-hoc-Auftrag ablehnen?",
+            "adhocDismissMessage": "Wenn Sie diesen Ad-hoc-Auftrag ablehnen, wird er nicht mehr als verfügbarer Auftrag angezeigt.",
+            "accept": "Annehmen",
+            "continue": "Weiter"
+        },
+        "report": {
+            "issues": "Probleme",
+            "fuelReports": "Tankberichte",
+            "status": "Status:",
+            "priority": "Priorität:",
+            "report": "Bericht:",
+            "type": "Typ:",
+            "category": "Kategorie:",
+            "vehicle": "Fahrzeug:",
+            "reporter": "Melder:",
+            "odometer": "Kilometerstand:",
+            "volume": "Menge:",
+            "cost": "Kosten:"
+        }
+    }
+}

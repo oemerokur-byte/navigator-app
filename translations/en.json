@@ -84,5 +84,78 @@
         "permissionDeniedPrompt": "Location access is required before you can sign in. Would you like to allow access now?",
         "locationBlockedPrompt": "Location access has been blocked. Please open Settings and enable it to continue.",
         "goToSettings": "Go to Settings"
+    },
+    "ui": {
+        "tabs": {
+            "dash": "Dash",
+            "orders": "Orders",
+            "reports": "Reports",
+            "chat": "Chat",
+            "account": "Account"
+        },
+        "yes": "Yes",
+        "no": "No",
+        "na": "N/A",
+        "invalidPhone": "Invalid phone number provided.",
+        "tracker": {
+            "title": "Okur Fleet",
+            "description": "Location is being shared"
+        },
+        "dashboard": {
+            "tracking": "Tracking:",
+            "location": "Location:",
+            "latitude": "Latitude:",
+            "longitude": "Longitude:",
+            "heading": "Heading:",
+            "altitude": "Altitude:",
+            "activeOrders": "Active Orders",
+            "speed": "Speed"
+        },
+        "order": {
+            "acceptOrder": "Accept Order",
+            "dismissOrder": "Dismiss Order",
+            "startOrder": "Start Order",
+            "updateActivity": "Update Activity",
+            "startNavigation": "Start Navigation",
+            "orderInformation": "Order Information",
+            "internalId": "Internal ID",
+            "trackingNumber": "Tracking Number",
+            "proofOfDelivery": "Proof of Delivery",
+            "type": "Type",
+            "dateCreated": "Date Created",
+            "dateScheduled": "Date Scheduled",
+            "dateDispatched": "Date Dispatched",
+            "orderRoute": "Order Route",
+            "orderProgress": "Order Progress",
+            "currentDestination": "Current Destination",
+            "nextDestination": "Next Destination",
+            "totalDistance": "Total Distance",
+            "startTime": "Start Time",
+            "currentEta": "Current ETA",
+            "ect": "Est. completion",
+            "notDispatchedTitle": "Order Not Dispatched Yet",
+            "notDispatchedMessage": "This order is not yet dispatched, are you sure you want to continue?",
+            "warning": "Warning!",
+            "adhocAcceptTitle": "Accept Ad-Hoc order?",
+            "adhocAcceptMessage": "By accepting this ad-hoc order it will become assigned to you and the order will start immediately.",
+            "adhocDismissTitle": "Dismiss Ad-Hoc order?",
+            "adhocDismissMessage": "By dismissing this ad-hoc order it will no longer display as an available order.",
+            "accept": "Accept",
+            "continue": "Continue"
+        },
+        "report": {
+            "issues": "Issues",
+            "fuelReports": "Fuel Reports",
+            "status": "Status:",
+            "priority": "Priority:",
+            "report": "Report:",
+            "type": "Type:",
+            "category": "Category:",
+            "vehicle": "Vehicle:",
+            "reporter": "Reporter:",
+            "odometer": "Odometer:",
+            "volume": "Volume:",
+            "cost": "Cost:"
+        }
     }
 }

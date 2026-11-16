@@ -1,0 +1,160 @@
+{
+    "common": {
+        "fleetbase": "Fleetbase",
+        "navigator": "Navigator",
+        "apiKey": "API ключ",
+        "cancel": "Отказ",
+        "new": "Нов",
+        "create": "Създаване",
+        "save": "Запазване",
+        "delete": "Изтриване",
+        "edit": "Редактиране",
+        "update": "Обновяване",
+        "service": "Услуга",
+        "retry": "Опитай отново",
+        "loading": "Зареждане...",
+        "confirm": "Потвърждаване",
+        "confirmation": "Потвърждение",
+        "ok": "OK",
+        "done": "Готово",
+        "tryAgain": "Опитайте отново"
+    },
+    "orderStatuses": {
+        "created": "Създадена",
+        "preparing": "В подготовка",
+        "dispatched": "Разпределена",
+        "driver_enroute": "Шофьорът е на път",
+        "pending": "Изчакваща",
+        "in_progress": "В изпълнение",
+        "completed": "Завършена"
+    },
+    "BootScreen": {
+        "missingRequiredConfigurationKeys": "Липсват задължителни конфигурационни ключове"
+    },
+    "AccountScreen": {
+        "changeProfilePhotoOptions": {
+            "takePhoto": "Направи снимка",
+            "photoLibrary": "Фотобиблиотека",
+            "deleteProfilePhoto": "Изтриване на профилната снимка"
+        },
+        "profilePhoto": "Профилна снимка",
+        "email": "Имейл",
+        "phoneNumber": "Телефонен номер",
+        "name": "Име",
+        "language": "Език",
+        "theme": "Тема",
+        "deleteAccount": "Изтриване на акаунта",
+        "termsOfService": "Условия за ползване",
+        "privacyPolicy": "Политика за поверителност",
+        "tracking": "Проследяване",
+        "account": "Акаунт",
+        "dataProtection": "Защита на данните",
+        "clearCache": "Изчистване на кеша",
+        "signOut": "Изход",
+        "signedOut": "Излязохте от профила.",
+        "cacheCleared": "Кешът е изчистен.",
+        "schemeChanged": "Вече се използва режим {{selectedScheme}}.",
+        "languageChanged": "Вече се използва езикът: {{selectedLanguage}}.",
+        "photoChanged": "Профилната снимка е променена.",
+        "photoRemoved": "Профилната снимка е премахната."
+    },
+    "ProfileScreen": {
+        "organizationChanged": "Превключено към организация {{selectedOrganization}}."
+    },
+    "AddNewLocationScreen": {
+        "addNewAddress": "Добавяне на нов адрес",
+        "streetName": "Улица и номер",
+        "weThinkYoureAroundHere": "Мислим, че сте някъде наблизо",
+        "cantFindYourAddress": "Не намирате адреса си?",
+        "useMapInstead": "Използвайте карта"
+    },
+    "SetupWarningScreen": {
+        "configurationMissing": "Липсва конфигурация!",
+        "unconfiguredApp": "Изглежда приложението не е конфигурирано правилно.",
+        "envMissing": "липсва в средата!"
+    },
+    "LocationPermissionScreen": {
+        "enableLocationServices": "Известие за използване на местоположение",
+        "enableLocationPrompt": "Okur Fleet събира точното ви местоположение, за да могат диспечерите и офисът на вашата компания да виждат шофьорите и хода на поръчките в реално време, дори когато приложението е затворено или не се използва. Местоположението се събира, докато сте онлайн, и се предава сигурно.",
+        "shareAndContinue": "Разреши местоположението и продължи",
+        "privacyPolicy": "Политика за поверителност",
+        "permissionNeededTitle": "Необходимо е разрешение за местоположение",
+        "enableInSettingsTitle": "Включете местоположението в настройките",
+        "permissionDeniedPrompt": "За вход е необходим достъп до местоположението. Искате ли да разрешите достъпа сега?",
+        "locationBlockedPrompt": "Достъпът до местоположението е блокиран. Отворете настройките и го включете, за да продължите.",
+        "goToSettings": "Към настройките"
+    },
+    "ui": {
+        "tabs": {
+            "dash": "Начало",
+            "orders": "Поръчки",
+            "reports": "Отчети",
+            "chat": "Чат",
+            "account": "Профил"
+        },
+        "yes": "Да",
+        "no": "Не",
+        "na": "Н/д",
+        "invalidPhone": "Въведен е невалиден телефонен номер.",
+        "tracker": {
+            "title": "Okur Fleet",
+            "description": "Местоположението се споделя"
+        },
+        "dashboard": {
+            "tracking": "Проследяване:",
+            "location": "Местоположение:",
+            "latitude": "Географска ширина:",
+            "longitude": "Географска дължина:",
+            "heading": "Посока:",
+            "altitude": "Надморска височина:",
+            "activeOrders": "Активни поръчки",
+            "speed": "Скорост"
+        },
+        "order": {
+            "acceptOrder": "Приемане на поръчка",
+            "dismissOrder": "Отхвърляне на поръчка",
+            "startOrder": "Започване на поръчка",
+            "updateActivity": "Обновяване на статуса",
+            "startNavigation": "Започване на навигация",
+            "orderInformation": "Информация за поръчката",
+            "internalId": "Вътрешен ID",
+            "trackingNumber": "Номер за проследяване",
+            "proofOfDelivery": "Доказателство за доставка",
+            "type": "Тип",
+            "dateCreated": "Дата на създаване",
+            "dateScheduled": "Планирана дата",
+            "dateDispatched": "Дата на разпределяне",
+            "orderRoute": "Маршрут на поръчката",
+            "orderProgress": "Ход на поръчката",
+            "currentDestination": "Текуща дестинация",
+            "nextDestination": "Следваща дестинация",
+            "totalDistance": "Общо разстояние",
+            "startTime": "Начален час",
+            "currentEta": "Текущо време на пристигане",
+            "ect": "Очаквано завършване",
+            "notDispatchedTitle": "Поръчката още не е разпределена",
+            "notDispatchedMessage": "Тази поръчка още не е разпределена. Сигурни ли сте, че искате да продължите?",
+            "warning": "Внимание!",
+            "adhocAcceptTitle": "Приемане на спешна поръчка?",
+            "adhocAcceptMessage": "Ако приемете тази спешна поръчка, тя ще ви бъде назначена и ще започне веднага.",
+            "adhocDismissTitle": "Отхвърляне на спешна поръчка?",
+            "adhocDismissMessage": "Ако отхвърлите тази спешна поръчка, тя вече няма да се показва като налична.",
+            "accept": "Приемане",
+            "continue": "Продължи"
+        },
+        "report": {
+            "issues": "Проблеми",
+            "fuelReports": "Отчети за гориво",
+            "status": "Статус:",
+            "priority": "Приоритет:",
+            "report": "Отчет:",
+            "type": "Тип:",
+            "category": "Категория:",
+            "vehicle": "Превозно средство:",
+            "reporter": "Подал отчета:",
+            "odometer": "Километраж:",
+            "volume": "Количество:",
+            "cost": "Цена:"
+        }
+    }
+}

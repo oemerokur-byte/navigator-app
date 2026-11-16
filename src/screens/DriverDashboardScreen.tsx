@@ -6,6 +6,7 @@ import { humanize } from 'inflected';
 import { get } from '../utils';
 import OdometerNumber from '../components/OdometerNumber';
 import useAppTheme from '../hooks/use-app-theme';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const WidgetContainer = ({ px = '$4', py = '$4', children, ...props }) => {
     const { isDarkMode } = useAppTheme();
@@ -18,6 +19,7 @@ const WidgetContainer = ({ px = '$4', py = '$4', children, ...props }) => {
 
 const DriverDashboardScreen = () => {
     const theme = useTheme();
+    const { t } = useLanguage();
     const navigation = useNavigation();
     const { isTracking, location } = useLocation();
     const { allActiveOrders } = useOrderManager();
@@ -29,22 +31,22 @@ const DriverDashboardScreen = () => {
                     <WidgetContainer>
                         <XStack>
                             <YStack flex={1}>
-                                <Text color='$textPrimary'>Tracking:</Text>
+                                <Text color='$textPrimary'>{t('ui.dashboard.tracking')}</Text>
                             </YStack>
                             <YStack flex={1} alignItems='flex-end'>
-                                <Text color={isTracking ? '$successBorder' : '$textSecondary'}>{isTracking ? 'Yes' : 'No'}</Text>
+                                <Text color={isTracking ? '$successBorder' : '$textSecondary'}>{isTracking ? t('ui.yes') : t('ui.no')}</Text>
                             </YStack>
                         </XStack>
                     </WidgetContainer>
                     <WidgetContainer>
                         <Text color='$textPrimary' fontWeight='bold' mb='$3'>
-                            Location:
+                            {t('ui.dashboard.location')}
                         </Text>
                         <XStack flexWrap='wrap' gap='$3'>
                             {['latitude', 'longitude', 'heading', 'altitude'].map((key, index) => {
                                 return (
                                     <YStack key={index} width='45%' overflow='hidden'>
-                                        <Text color='$textSecondary'>{humanize(key)}:</Text>
+                                        <Text color='$textSecondary'>{t(`ui.dashboard.${key}`, { defaultValue: humanize(key) })}</Text>
                                         <Text color='$textPrimary' numberOfLines={1}>
                                             {get(location, `coords.${key}`)}
                                         </Text>
@@ -58,7 +60,7 @@ const DriverDashboardScreen = () => {
                     <WidgetContainer flex={1} alignItems='center' justifyContent='center'>
                         <YStack>
                             <Text color='$textPrimary' fontWeight='bold' mb='$2'>
-                                Active Orders
+                                {t('ui.dashboard.activeOrders')}
                             </Text>
                         </YStack>
                         <YStack>
@@ -68,7 +70,7 @@ const DriverDashboardScreen = () => {
                     <WidgetContainer flex={1} alignItems='center' justifyContent='center'>
                         <YStack>
                             <Text color='$textPrimary' fontWeight='bold' mb='$2'>
-                                Speed
+                                {t('ui.dashboard.speed')}
                             </Text>
                         </YStack>
                         <YStack>
