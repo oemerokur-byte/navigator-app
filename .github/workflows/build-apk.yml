@@ -1,0 +1,53 @@
+name: Android APK bauen
+
+on:
+  workflow_dispatch:
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.19.4'
+          cache: yarn
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Einstellungen schreiben (.env)
+        run: |
+          cat > .env <<ENV
+          APP_NAME=${{ vars.APP_NAME }}
+          APP_IDENTIFIER=${{ vars.APP_IDENTIFIER }}
+          APP_LINK_PREFIX=flbnavigator
+          FLEETBASE_HOST=${{ vars.FLEETBASE_HOST }}
+          FLEETBASE_KEY=${{ secrets.FLEETBASE_KEY }}
+          GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}
+          DEFAULT_COORDINATES=51.4344,6.7623
+          ENV
+
+      - name: Schluesseldatei anlegen
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > $RUNNER_TEMP/upload.keystore
+
+      - run: yarn install --frozen-lockfile
+
+      - name: APK bauen
+        working-directory: android
+        env:
+          ANDROID_NAVIGATOR_APP_UPLOAD_STORE_FILE: ${{ runner.temp }}/upload.keystore
+          ANDROID_NAVIGATOR_APP_UPLOAD_STORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          ANDROID_NAVIGATOR_APP_UPLOAD_KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          ANDROID_NAVIGATOR_APP_UPLOAD_KEY_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        run: ./gradlew assembleRelease --no-daemon
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: navigator-apk
+          path: android/app/build/outputs/apk/release/*.apk
