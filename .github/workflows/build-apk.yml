@@ -6,37 +6,66 @@ on:
 jobs:
   apk:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: '20.19.4'
-          cache: yarn
+
+      - name: Yarn 3.6.4 aktivieren
+        run: |
+          corepack enable
+          corepack prepare yarn@3.6.4 --activate
+
+      - name: Pakete installieren
+        run: yarn install --immutable
 
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '21'
 
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
+
+      - name: Android-Komponenten installieren
+        run: sdkmanager "platforms;android-36" "build-tools;36.0.0" "ndk;27.1.12297006"
+
+      - name: Node fuer Gradle merken
+        run: echo "NODE_BINARY=$(command -v node)" >> $GITHUB_ENV
+
       - name: Einstellungen schreiben (.env)
         run: |
-          cat > .env <<ENV
-          APP_NAME=${{ vars.APP_NAME }}
-          APP_IDENTIFIER=${{ vars.APP_IDENTIFIER }}
-          APP_LINK_PREFIX=flbnavigator
-          FLEETBASE_HOST=${{ vars.FLEETBASE_HOST }}
-          FLEETBASE_KEY=${{ secrets.FLEETBASE_KEY }}
-          GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}
-          DEFAULT_COORDINATES=51.4344,6.7623
-          ENV
+          {
+            echo "APP_NAME=${{ vars.APP_NAME }}"
+            echo "APP_IDENTIFIER=${{ vars.APP_IDENTIFIER }}"
+            echo "APP_LINK_PREFIX=flbnavigator"
+            echo "FLEETBASE_HOST=${{ vars.FLEETBASE_HOST }}"
+            echo "FLEETBASE_KEY=${{ secrets.FLEETBASE_KEY }}"
+            echo "GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}"
+            echo "DEFAULT_COORDINATES=51.4344,6.7623"
+            echo "ANDROID_VERSION_CODE=1"
+            echo "ANDROID_VERSION_NAME=1.0.0"
+          } > .env
+
+      - name: Firebase-Platzhalter anlegen
+        run: |
+          jq -n --arg pkg "${{ vars.APP_IDENTIFIER }}" '{
+            project_info: {project_number: "123456789012", project_id: "okur-fleet", storage_bucket: "okur-fleet.appspot.com"},
+            client: [{
+              client_info: {mobilesdk_app_id: "1:123456789012:android:0123456789abcdef", android_client_info: {package_name: $pkg}},
+              oauth_client: [],
+              api_key: [{current_key: "platzhalter-nicht-fuer-den-betrieb"}],
+              services: {appinvite_service: {other_platform_oauth_client: []}}
+            }],
+            configuration_version: "1"
+          }' > android/app/google-services.json
 
       - name: Schluesseldatei anlegen
-        run: |
-          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > $RUNNER_TEMP/upload.keystore
-
-      - run: yarn install --frozen-lockfile
+        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > $RUNNER_TEMP/upload.keystore
 
       - name: APK bauen
         working-directory: android
@@ -45,9 +74,11 @@ jobs:
           ANDROID_NAVIGATOR_APP_UPLOAD_STORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           ANDROID_NAVIGATOR_APP_UPLOAD_KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           ANDROID_NAVIGATOR_APP_UPLOAD_KEY_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-        run: ./gradlew assembleRelease --no-daemon
+        run: |
+          chmod +x ./gradlew
+          ./gradlew assembleRelease --no-daemon --stacktrace
 
       - uses: actions/upload-artifact@v4
         with:
-          name: navigator-apk
+          name: okur-fleet-apk
           path: android/app/build/outputs/apk/release/*.apk
